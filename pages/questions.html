@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/logo.ico">
+  <title>
+    MedBank SA
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.1.0" rel="stylesheet" />
+</head>
+
+<body class="g-sidenav-show   bg-gray-100">
+  <div class="min-height-300 bg-dark position-absolute w-100"></div>
+  <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="m-2" href="#" target="_blank">
+        <center>
+          <img src="../assets/img/logo.png" class="img-fluid" alt="MedBank SA" style="width: 30%;">
+        </center>
+      </a>
+    </div>
+
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="../pages/dashboard.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-tv-2 text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/billing.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-credit-card text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Billing History</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/profile.html">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">My Profile</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidenav-footer mx-3 ">
+      <a class="btn btn-primary btn-sm mb-0 w-100" href="sign-in.html" type="button">Logout</a>
+    </div>
+  </aside>
+  <main class="main-content position-relative border-radius-lg ">
+
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header pb-0 px-3">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h3 class="mb-0">Dermatology</h3>
+                                <h6 class="mb-0">DE 4100</h6>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-primary" id="reset-btn">
+                                    Reset Questions
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-4 p-3">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-8 mb-3">
+                                <div class="border-0 d-flex p-4 bg-gray-100 border-radius-lg flex-column h-100">
+                                    <div class="d-flex flex-column flex-grow-1" id="question-container">
+                                      <!-- Question content will be rendered here by JS -->
+                                    </div>
+                                    <!-- Next & Prev Buttons -->
+                                    <div class="d-flex justify-content-between mt-4 mb-3">
+                                        <button class="btn btn-outline-secondary" id="prev-question-btn">
+                                            <i class="fas fa-arrow-left me-2"></i> Prev
+                                        </button>
+                                        <button class="btn btn-primary" id="next-question-btn">
+                                            Next <i class="fas fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="border-0 d-flex p-4 bg-white border-radius-lg flex-column">
+                                        <div class="d-flex flex-column">
+                                            <h6 class="text-sm explanation_text" id="explanation_text">
+                                            <!-- Explanation text will appear here -->
+                                            </h6>
+                                        </div>
+                                    </div>                    
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-12 col-md-12 col-lg-4 mb-3">
+                                <div style="border:1px solid #ff2323;border-radius: 6px;" class="p-2">
+                                    <div class="d-flex flex-wrap gap-2 justify-content-start" id="question-numbers-blocks">
+                                        <!-- Question blocks will be rendered by JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Quiz questions data (at least 3 for the demo)
+        const questions = [
+            {
+                question: "What is the normal resting heart rate for a healthy adult?",
+                options: [
+                    { text: "A. 30–50 beats per minute", correct: false },
+                    { text: "B. 50–60 beats per minute", correct: false },
+                    { text: "C. 60–100 beats per minute", correct: true },
+                    { text: "D. 100–120 beats per minute", correct: false }
+                ],
+                explanation: "✅ The normal resting heart rate for adults ranges from 60 to 100 bpm. Well-trained athletes may have a lower rate."
+            },
+            {
+                question: "What is the first-line treatment for mild acne?",
+                options: [
+                    { text: "A. Topical antibiotics", correct: false },
+                    { text: "B. Oral isotretinoin", correct: false },
+                    { text: "C. Topical retinoids", correct: true },
+                    { text: "D. Systemic steroids", correct: false }
+                ],
+                explanation: "✅ Topical retinoids are considered first-line therapy for mild acne. Antibiotics and isotretinoin are reserved for more severe cases."
+            },
+            {
+                question: "Which skin cancer has the highest metastatic risk?",
+                options: [
+                    { text: "A. Basal cell carcinoma", correct: false },
+                    { text: "B. Squamous cell carcinoma", correct: false },
+                    { text: "C. Melanoma", correct: true },
+                    { text: "D. Dermatofibroma", correct: false }
+                ],
+                explanation: "✅ Melanoma carries the highest metastatic risk of all skin cancers."
+            }
+        ];
+
+        // Utility: LocalStorage key
+        const LOCALSTORAGE_KEY = 'medbank_dermatology_quiz_status_v1';
+
+        // Read answersState from localStorage, fallback to all unanswered
+        function loadAnswersState() {
+            try {
+                const json = localStorage.getItem(LOCALSTORAGE_KEY);
+                if (!json) throw 'none';
+                const parsed = JSON.parse(json);
+                // Defensive: ensure correct length, shape
+                if (!Array.isArray(parsed) || parsed.length !== questions.length) throw 'wrong length';
+                for (let i = 0; i < parsed.length; i++) {
+                    const val = parsed[i];
+                    if (typeof val !== "object" || typeof val.answered !== "boolean" || !("correct" in val)) throw 'bad val';
+                }
+                return parsed;
+            } catch (e) {
+                // If error (corrupt, old format, or new questions added/removed), reset state
+                return questions.map(() => ({ answered: false, correct: null }));
+            }
+        }
+
+        // Save answersState to localStorage
+        function saveAnswersState() {
+            try {
+                localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(answersState));
+            } catch(e) {
+                // Ignore quota errors
+            }
+        }
+
+        // Initialize answer state, from localStorage if any
+        let answersState = loadAnswersState();
+
+        let currentQuestionIndex = 0;
+
+        function renderQuestion(idx) {
+            const q = questions[idx];
+            // Render question and options
+            const questionHtml = `
+                <h6 class="mb-3 text-sm">
+                    Question ${idx+1}: ${q.question}
+                </h6>
+                <div class="quiz-options d-flex flex-column gap-0" data-explanation="${q.explanation}">
+                    ${q.options.map((opt, i) =>
+                        `<button class="btn btn-light quiz-option" data-correct="${opt.correct}" data-index="${i}" style="box-shadow: none; text-align: left;font-weight: 500;">
+                        ${opt.text}
+                        </button>`
+                    ).join('')}
+                </div>
+            `;
+            document.getElementById('question-container').innerHTML = questionHtml;
+
+            // Restore explanation text area (clear for new question, unless answered already)
+            const expText = document.getElementById('explanation_text');
+            expText.textContent = '';
+
+            // Check if this question has already been answered, show state if so
+            const quizOptionsBlock = document.querySelector("#question-container .quiz-options");
+            const options = quizOptionsBlock.querySelectorAll(".quiz-option");
+            if (answersState[idx].answered) {
+                // Display the answer state visually
+                options.forEach((btn) => {
+                    btn.classList.remove("btn-success", "btn-danger", "text-white", "btn-light", "border");
+                    if (btn.getAttribute("data-correct") === "true") {
+                        btn.classList.add("btn-success", "text-white");
+                    } else {
+                        btn.classList.add("btn-danger", "text-white");
+                    }
+                });
+                expText.textContent = quizOptionsBlock.getAttribute("data-explanation");
+            } else {
+                // Not answered yet: all options normal
+                options.forEach((btn) => {
+                    btn.classList.remove("btn-success", "btn-danger", "text-white");
+                    btn.classList.add("btn-light", "border");
+                });
+            }
+
+            // Prevent multiple selections after first answer
+            quizOptionsBlock.onclick = function(e){
+                if (!e.target.classList.contains("quiz-option")) return;
+                // If already answered, do nothing
+                if (answersState[idx].answered) return;
+
+                // Mark all buttons
+                options.forEach((btn) => {
+                    btn.classList.remove("btn-success", "btn-danger", "text-white", "btn-light", "border");
+                    if (btn.getAttribute("data-correct") === "true") {
+                        btn.classList.add("btn-success", "text-white");
+                    } else {
+                        btn.classList.add("btn-danger", "text-white");
+                    }
+                });
+
+                let wasCorrect = (e.target.getAttribute("data-correct") === "true");
+                answersState[idx].answered = true;
+                answersState[idx].correct = wasCorrect;
+
+                // Show explanation
+                document.getElementById('explanation_text').textContent = quizOptionsBlock.getAttribute("data-explanation");
+
+                // Persist the answers state!
+                saveAnswersState();
+
+                // Update question block indicator
+                updateQuestionBlockClass(idx);
+
+            };
+        }
+
+        // Render numbers, add .wrong or .correct according to answersState
+        function renderQuestionNumbers(idx) {
+            const blocksParent = document.getElementById('question-numbers-blocks');
+            blocksParent.innerHTML = '';
+            for (let i = 0; i < questions.length; i++) {
+                const div = document.createElement('div');
+                div.className = 'questions_block_numbers' +
+                    (i === idx ? ' current' : '') +
+                    (answersState[i].answered && answersState[i].correct === false ? ' wrong' : '') +
+                    (answersState[i].answered && answersState[i].correct === true ? ' correct' : '');
+                div.textContent = (i+1);
+                div.style.cursor = 'pointer';
+                div.addEventListener('click', () => {
+                    currentQuestionIndex = i;
+                    updateView();
+                });
+                blocksParent.appendChild(div);
+            }
+        }
+
+        // Ensure we update the relevant question_number_block when answered
+        function updateQuestionBlockClass(idx) {
+            // Get all blocks and set class for this index
+            const blocksParent = document.getElementById('question-numbers-blocks');
+            if (!blocksParent) return;
+            const blocks = blocksParent.querySelectorAll('.questions_block_numbers');
+            if (blocks[idx]) {
+                blocks[idx].classList.remove('wrong', 'correct');
+                if (answersState[idx].answered && answersState[idx].correct === false) {
+                    blocks[idx].classList.add('wrong');
+                    blocks[idx].classList.remove('correct');
+                } else if (answersState[idx].answered && answersState[idx].correct === true) {
+                    blocks[idx].classList.add('correct');
+                    blocks[idx].classList.remove('wrong');
+                }
+            }
+        }
+
+        function updateView() {
+            renderQuestion(currentQuestionIndex);
+            renderQuestionNumbers(currentQuestionIndex);
+
+            // Disable prev/next buttons if at ends
+            document.getElementById('prev-question-btn').disabled = (currentQuestionIndex === 0);
+            document.getElementById('next-question-btn').disabled = (currentQuestionIndex === questions.length - 1);
+        }
+
+        // Prev/Next event listeners
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('prev-question-btn').addEventListener('click', function() {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    updateView();
+                }
+            });
+            document.getElementById('next-question-btn').addEventListener('click', function() {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    updateView();
+                }
+            });
+            updateView();
+        });
+
+        // Reset button event listener: clears all answered state & resets view, and also removes localstorage
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('reset-btn').addEventListener('click', function() {
+                if (typeof Swal !== "undefined" && Swal.fire) {
+                    Swal.fire({
+                        title: 'Reset all answers?',
+                        text: "Are you sure you want to reset all your answers? This action cannot be undone.",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, reset',
+                        cancelButtonText: 'Cancel'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Reset answersState for all questions
+                            for (let i = 0; i < answersState.length; i++) {
+                                answersState[i] = { answered: false, correct: null };
+                            }
+                            // Also remove from localStorage
+                            try {
+                                localStorage.removeItem(LOCALSTORAGE_KEY);
+                            } catch(e) {
+                                // ignore
+                            }
+                            // Reset current question index
+                            currentQuestionIndex = 0;
+                            // Optionally clear radios/choices if any custom logic exists
+                            updateView();
+                        }
+                    });
+                } else {
+                    // Fallback if sweetalert2 is not loaded
+                    if (window.confirm('Are you sure you want to reset all your answers?')) {
+                        for (let i = 0; i < answersState.length; i++) {
+                            answersState[i] = { answered: false, correct: null };
+                        }
+                        try {
+                            localStorage.removeItem(LOCALSTORAGE_KEY);
+                        } catch(e) {
+                            // ignore
+                        }
+                        currentQuestionIndex = 0;
+                        updateView();
+                    }
+                }
+            });
+        });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+      <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>
+                <a href="javascript:void(0)" class="font-weight-bold text-primary" target="_blank">MedBank SA</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/argon-dashboard.min.js?v=2.1.0"></script>
+</body>
+
+</html>
