@@ -85,13 +85,11 @@ class AuthController extends BaseController
                 'samesite' => 'Lax',
             ]);
 
-            return $this->response->setJSON([
+            return $this->response->setStatusCode(200)->setJSON([
                 'status' => 'success',
                 'token' => $accessToken,
                 'expires_in' => $expireIn
             ]);
-            
-            http_response(200);
         }
 
         return $this->response->setJSON([
@@ -101,10 +99,26 @@ class AuthController extends BaseController
 
     }
 
-
     public function login()
     {
         return view('auth/login');
+    }
+
+
+    public function signup(): string
+    {
+        return view('auth/signup');
+    }
+
+
+    public function forgotpassword(): string
+    {
+        return view('auth/forgot-password');
+    }
+
+    public function resetpassword(): string
+    {
+        return view('auth/reset-password');
     }
 
     public function logout()

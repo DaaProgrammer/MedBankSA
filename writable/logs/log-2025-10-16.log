@@ -1,0 +1,52 @@
+CRITICAL - 2025-10-16 19:00:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/reset-password.php"
+[Method: GET, Route: reset-password]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/reset-password.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('auth/reset-password', [], true)
+ 3 APPPATH\Controllers\AuthController.php(126): view('auth/reset-password')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->resetpassword()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\MedBankSA\\argon-dashboard-master\\argon-dashboard-master\\codeigniter4-framework-v4.6.1-0-gd021b04\\MedBankSA\\public\\index.php')
+CRITICAL - 2025-10-16 19:00:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/reset-password.php"
+[Method: GET, Route: reset-password]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/reset-password.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('auth/reset-password', [], true)
+ 3 APPPATH\Controllers\AuthController.php(125): view('auth/reset-password')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->resetpassword()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\MedBankSA\\argon-dashboard-master\\argon-dashboard-master\\codeigniter4-framework-v4.6.1-0-gd021b04\\MedBankSA\\public\\index.php')
+CRITICAL - 2025-10-16 19:01:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/reset-password.php"
+[Method: GET, Route: reset-password]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/reset-password.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('auth/reset-password', [], true)
+ 3 APPPATH\Controllers\AuthController.php(125): view('auth/reset-password')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->resetpassword()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\MedBankSA\\argon-dashboard-master\\argon-dashboard-master\\codeigniter4-framework-v4.6.1-0-gd021b04\\MedBankSA\\public\\index.php')
+CRITICAL - 2025-10-16 19:07:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/reset-password.php"
+[Method: GET, Route: reset-password]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/reset-password.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('auth/reset-password', [], true)
+ 3 APPPATH\Controllers\AuthController.php(121): view('auth/reset-password')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->resetpassword()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\user-pc\\Music\\MedBankSA\\argon-dashboard-master\\argon-dashboard-master\\codeigniter4-framework-v4.6.1-0-gd021b04\\MedBankSA\\public\\index.php')
