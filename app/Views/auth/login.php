@@ -45,7 +45,7 @@
                       <a href="/forgot-password" class="text-primary text-gradient font-weight-bold">Forgot Password?</a>
                     </div>
                     <div class="text-center">
-                      <a href="dashboard.html"><button type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button></a>
+                      <a href="/dashboard"><button type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button></a>
                     </div>
                   </form>
                 </div>
